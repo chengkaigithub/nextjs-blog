@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3001"
+    "start": "next start -p 3001",
+    "start-prod": "pm2 start yarn --watch --name nextjs.blog --instances 2 -- start",
+    "restart-prod": "pm2 restart nextjs.blog"
   },
   "dependencies": {
     "date-fns": "^2.11.1",
